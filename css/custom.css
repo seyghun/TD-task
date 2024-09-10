@@ -1,0 +1,140 @@
+/******************************************
+    File Name: custom.css
+    Template Name: Aven
+/****************************************** */
+
+/** ADD YOUR AWESOME CODES HERE **/
+.errorMessage {
+    background: #FFCC00;
+    color: #2E2E2E;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    white-space: pre;
+    font-size: 16px;
+    cursor: pointer;
+    width: 90%;
+    max-width: 400px;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    opacity: 0;
+    animation: slideUp 0.5s forwards;
+}
+
+
+.alert-svg {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+#messageClose svg {
+    background-color: #FF5E00;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateX(-50%) translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+}
+
+.inputRequired {
+    border: 2px solid red !important;
+}
+#messageSvg{
+    width: 3%;
+}
+.iti{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+/* Основні стилі для модального вікна */
+.modal-success {
+    display: none; /* Приховати за замовчуванням */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); /* Напівпрозорий фон */
+    animation: fadeIn 0.3s;
+  }
+
+  /* Стилі для вмісту модального вікна */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 20% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ширина модального вікна */
+    max-width: 600px; /* Максимальна ширина */
+    position: relative;
+    animation: zoomIn 0.3s;
+  }
+
+
+
+  /* Анімації */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes zoomIn {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+
+  /* Показ модального вікна */
+  .modal.show {
+    display: block;
+  }
+
+  .modal_h2{
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .modal_text{
+    text-align: center;
+  }
+
+  @media (max-width: 780px) {
+    .errorMessage {
+        max-width: 90vw;
+        font-size: 14px;
+    }
+    .modal-content {
+        margin: 65% auto;
+    }
+}
+
+#countdown{
+    font-size: 20px;
+}
+.thank-you-message{
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+}

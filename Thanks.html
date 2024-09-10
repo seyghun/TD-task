@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="icon" type="image/png" href="ty-assets/img/checked.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="ty-assets/css/main.css">
+
+  <script>
+    var fbp = new URLSearchParams(window.location.search).get('fbp');
+    ! function (f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function () {
+        n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = '2.0';
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', fbp);
+    fbq('track', 'CompleteRegistration');
+  </script>
+
+  <script>
+     var ggl = new URLSearchParams(window.location.search).get('ggl');
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=G-` + ggl;
+    document.head.appendChild(script);
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', `G-` + ggl);
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=<?php echo trim($_GET['custom1']) ?>&ev=Lead&noscript=1" />
+  </noscript>
+
+  <!-- redirect to autologin url after 3 seconds -->
+  <script>
+    var redirectUrl = new URLSearchParams(window.location.search).get('redirect');
+
+    if (redirectUrl !== null && redirectUrl !== '') {
+      setTimeout(function() {
+        window.location.href = redirectUrl;
+      }, 3000);
+    }
+  </script>
+
+</head>
+
+<body>
+<div class="main-wrapper">
+  <header class="header">
+  </header>
+  <main class="main">
+    <div class="container">
+      <div class="main-content">
+        <img src="ty-assets/img/checked.png" class="completed-img-desk" alt="completed">
+        <img src="ty-assets/img/like.png" class="completed-img-mob" alt="completed">
+        <h1 class="main-heading">
+          <span class="main-heading-1st"></span> <br>
+          <span class="main-heading-2nd"></span>
+        </h1>
+        <p class="thnx-text">
+          <span class="thnx-text-1st"></span>
+          <br><br>
+          <span class="thnx-text-2nd"></span>
+        </p>
+        <div class="counter-wrapper">
+          <div class="numbers-wrapper">
+            <div class="numbers-block-outer">
+              <div class="numbers-block-inner">
+                <span class="current-number hours">23</span>
+              </div>
+            </div>
+            <span class="time-measure hours-span"></span>
+          </div>
+          <div class="numbers-wrapper">
+            <div class="numbers-block-outer">
+              <div class="numbers-block-inner">
+                <span class="current-number minutes">59</span>
+              </div>
+            </div>
+            <span class="time-measure minutes-span"></span>
+          </div>
+          <div class="numbers-wrapper">
+            <div class="numbers-block-outer">
+              <div class="numbers-block-inner">
+                <span class="current-number seconds">59</span>
+              </div>
+            </div>
+            <span class="time-measure seconds-span"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="ty-assets/img/main-bg-desk.jpg" class="main-bg-img-desk" alt="main background">
+    <img src="ty-assets/img/main-bg-mob.jpg" class="main-bg-img-mob" alt="main background">
+  </main>
+</div>
+<script>
+  setTimeout(isValidHttpUrl, 2000)
+
+  var auto_login_url = "<?php echo $redurectUrl; ?>";
+
+  function isValidHttpUrl(string) {
+    let url;
+
+    try {
+      url = new URL(string);
+    } catch (_) {
+      return false;
+    }
+
+    return url.protocol === "http:" || url.protocol === "https:";
+  }
+
+  if (isValidHttpUrl(auto_login_url)) {
+    window.location.href = auto_login_url;
+  }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
+<script src="ty-assets/js/counter.js"></script>
+<script src="ty-assets/js/lang.js"></script>
+</body>
+
+</html>

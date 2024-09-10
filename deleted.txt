@@ -1,0 +1,48 @@
+
+ВИДАЛЕНО:
+
+- <!--[if lt IE 9]>
+   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+   <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+   <![endif]-->
+в index.html  
+- <img src="uploads/testi_01.png" alt="" class="img-responsive alignleft"> в index.html
+- <img src="uploads/testi_02.png" alt="" class="img-responsive alignleft"> в index.html
+- <img src="uploads/testi_03.png" alt="" class="img-responsive alignleft"> в index.html
+- <img src="uploads/testi_01.png" alt="" class="img-responsive alignleft"> в index.html
+- <img src="uploads/testi_02.png" alt="" class="img-responsive alignleft"> в index.html
+- <img src="uploads/testi_03.png" alt="" class="img-responsive alignleft"> в index.html
+- style="background-image:url('uploads/parallax_02.png');" в index.html  
+- contact.php
+- Подключение в форме index.html action="contact.php"  
+- _flaticon.scss
+- flaticon.css
+- Flaticon.eot
+- flaticon.html
+- Flaticon.svg
+- fontawesome-webfont.eot
+- fontawesome-webfont.svg
+- FontAwesome.otf
+- glyphicons-halflings-regular.eot
+- glyphicons-halflings-regular.svg
+- glyphicons-halflings-regular.ttf
+- glyphicons-halflings-regular.woff
+- glyphicons-halflings-regular.woff2  
+- foundation.jpg
+- phonebg.png  
+- bootstrap-theme.css
+- bootstrap-theme.css.map
+- bootstrap-theme.min.css
+- bootstrap-theme.min.css.map
+- bootstrap.css
+- bootstrap.css.map
+- bootstrap.min.css.map
+- colors.css
+- font-awesome.css  
+- animate.js
+- jquery.prettyPhoto.js
+- jquery.vide.js
+- owl.carousel.js
+- retina.js
+- scroll.js  
+---
